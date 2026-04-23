@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0f0d0a;
+  --color-surface: #17130f;
+  --color-card: #211a13;
+  --color-text: #f6f1e8;
+  --color-muted: #b7ad9d;
+  --color-primary: #cba966;
+  --color-accent: #e8dbc2;
+}
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply m-0 bg-bg font-body text-text antialiased;
+  background-image:
+    radial-gradient(circle at 6% 6%, rgba(203, 169, 102, 0.22), transparent 28%),
+    radial-gradient(circle at 92% 18%, rgba(232, 219, 194, 0.09), transparent 30%),
+    linear-gradient(to bottom, #0f0d0a, #0e0b08 55%, #120f0b);
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-6 py-20 md:px-10 lg:px-14;
+}
+
+.headline {
+  @apply font-display text-4xl font-semibold leading-[1.08] sm:text-5xl lg:text-7xl;
+}
+
+.subheadline {
+  @apply text-sm uppercase tracking-[0.22em] text-primary;
+}
+
+.glass {
+  @apply rounded-soft bg-card shadow-soft backdrop-blur;
+  border: 1px solid rgba(203, 169, 102, 0.2);
+  background-color: rgba(33, 26, 19, 0.65);
+}
